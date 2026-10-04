@@ -96,11 +96,16 @@
                 <p>During 2016-2017, I was TA for CS224n: Natural Language Processing with Deep Learning.</p>
                 
                 <p style="text-align:center">
-                  <a href="mailto:qiaojingyan9@gmail.com">Email</a> &nbsp;/&nbsp;
+                  <a id="email-link" data-user="qiaojingyan9" data-domain="gmail.com">Email</a> &nbsp;/&nbsp;
                   <a href="https://www.linkedin.com/in/qiaojingyan/">LinkedIn</a>
                 </p>
             </div>
         </div>
     </div>
+    <script>
+        // Assemble the mailto link at runtime so the address isn't in the HTML for scrapers.
+        var emailLink = document.getElementById('email-link');
+        emailLink.href = 'mailto:' + emailLink.dataset.user + '@' + emailLink.dataset.domain;
+    </script>
 </body>
 </html>
